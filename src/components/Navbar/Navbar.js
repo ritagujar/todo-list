@@ -14,6 +14,7 @@ const LogoText = styled(Link)`
   font-weight: 800;
   font-style: italic;
   text-decoration: none;
+  word-spacing: 1px;
   font-size: 1.4rem;
   border-bottom: 1px dashed #242455;
 `;
