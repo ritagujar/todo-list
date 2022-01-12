@@ -28,7 +28,7 @@ const Login = () => {
           style={{
             display: "flex",
             justifyContent: "flex-end",
-            marginTop: "10px",
+            // marginTop: "10px",
             fontSize: "1.1rem",
           }}
           to="/"

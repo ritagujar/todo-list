@@ -5,7 +5,6 @@ export const LoginContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* max-width: 100vh; */
   /* margin-top: 2rem; */
   justify-content: center;
   /* overflow: hidden; */
@@ -13,6 +12,7 @@ export const LoginContainer = styled.div`
 export const StyleText = styled.h1`
   color: #242455;
   font-style: italic;
+  font-size: 1.7rem;
 `;
 export const Text = styled.p`
   margin-top: 8px;
@@ -39,6 +39,7 @@ export const Card = styled.div`
     border: 1px solid #617287;
     padding-left: 10px;
     font-size: 1rem;
+    margin-bottom: 12px;
     font-family: "Manrope", sans-serif;
   }
   input:focus {
@@ -51,13 +52,13 @@ export const TextField = styled.label`
   color: #242455;
   font-size: 1.2rem;
   font-weight: 600;
-  margin-top: 12px;
+  /* margin-top: 12px; */
   margin-bottom: 10px;
 `;
 
 export const Button = styled.button`
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 15px;
   width: 145px;
   height: 38px;
   border: none;
