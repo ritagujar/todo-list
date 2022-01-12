@@ -6,6 +6,7 @@ export const LoginContainer = styled.div`
   align-items: center;
   flex-direction: column;
   margin-top: 2rem;
+  overflow: hidden;
 `;
 export const StyleText = styled.h1`
   margin-bottom: 10px;
@@ -28,11 +29,11 @@ export const Card = styled.div`
   flex-direction: column;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  padding: 2rem 2rem;
+  padding: 1.3rem 1.3rem;
   margin-bottom: 20px;
   color: #07081c;
   input {
-    height: 46px;
+    height: 42px;
     width: 22rem;
     border: 1px solid #617287;
     padding-left: 10px;
@@ -57,7 +58,7 @@ export const Button = styled.button`
   margin: 0 auto;
   margin-top: 20px;
   width: 145px;
-  height: 43px;
+  height: 42px;
   border: none;
   color: #ffffff;
   background-image: linear-gradient(80deg, #ac3678, #d8314f, #fa8246);
