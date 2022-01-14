@@ -19,7 +19,7 @@ const Login = () => {
       </Text>
       <Card>
         <TextField>Your email</TextField>
-        <input type="text" htmlFor="" placeholder="Enter email"></input>
+        <input type="email" htmlFor="" placeholder="Enter email"></input>
 
         <TextField>Your password</TextField>
         <input type="password" htmlFor="" placeholder="******"></input>
