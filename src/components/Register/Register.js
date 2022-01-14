@@ -18,6 +18,7 @@ const Register = () => {
   const {
     value: usernameValue,
     isValid: usernameIsValid,
+    hasError: usernameHasError,
     valueChangeHandler: usernameChangeHandler,
     inputBlurHandler: usernameBlurHandler,
     reset: resetUsername,
@@ -26,6 +27,7 @@ const Register = () => {
   const {
     value: emailValue,
     isValid: emailIsValid,
+    hasError: emailHasError,
     valueChangeHandler: emailChangeHandler,
     inputBlurHandler: emailBlurHandler,
     reset: resetEamil,
@@ -34,6 +36,7 @@ const Register = () => {
   const {
     value: passwordValue,
     isValid: passwordIsValid,
+    hasError: passwordHasError,
     valueChangeHandler: passwordChangeHandler,
     inputBlurHandler: passwordBlurHandler,
     reset: resetPassword,
@@ -58,6 +61,14 @@ const Register = () => {
     resetPassword();
   };
 
+  const usernameClasses = usernameHasError
+    ? "form-control invalid"
+    : "form-control";
+  const emailClasses = emailHasError ? "form-control invalid" : "form-control";
+  const passwordClasses = passwordHasError
+    ? "form-control invalid"
+    : "form-control";
+
   return (
     <LoginContainer>
       <StyleText>Register</StyleText>
@@ -68,6 +79,7 @@ const Register = () => {
       <Card>
         <TextField>Your username</TextField>
         <input
+          className={usernameClasses}
           type="text"
           htmlFor=""
           placeholder="Enter Username"
@@ -75,25 +87,37 @@ const Register = () => {
           onChange={usernameChangeHandler}
           onBlur={usernameBlurHandler}
         />
+        {usernameHasError && (
+          <p className="error-text">Please enter username.</p>
+        )}
+
         <TextField>Your email</TextField>
         <input
+          className={emailClasses}
           type="email"
           htmlFor=""
           placeholder="Enter email"
           value={emailValue}
           onChange={emailChangeHandler}
           onBlur={emailBlurHandler}
-        ></input>
+        />
+        {emailHasError && <p className="error-text">Please enter email</p>}
 
         <TextField>Your password</TextField>
         <input
+          className={passwordClasses}
           type="password"
           htmlFor=""
-          placeholder="******"
+          placeholder="Enter password"
           value={passwordValue}
           onChange={passwordChangeHandler}
           onBlur={passwordBlurHandler}
-        ></input>
+        />
+        {passwordHasError && (
+          <p className="error-text">
+            Please enter password greater than 6 digits.
+          </p>
+        )}
         <Button type="submit" onClick={formSubmitHandler}>
           Register
         </Button>

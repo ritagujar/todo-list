@@ -39,7 +39,7 @@ export const Card = styled.div`
     border: 1px solid #617287;
     padding-left: 10px;
     font-size: 1rem;
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
     font-family: "Manrope", sans-serif;
   }
   input:focus {
