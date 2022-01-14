@@ -30,7 +30,8 @@ export const Card = styled.div`
   flex-direction: column;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  padding: 1.3rem 1.3rem;
+  /* padding: 1.3rem 1.3rem; */
+  padding: 0 1.3rem;
   /* margin-bottom: 20px; */
   color: #07081c;
   input {
@@ -52,7 +53,7 @@ export const TextField = styled.label`
   color: #242455;
   font-size: 1.2rem;
   font-weight: 600;
-  /* margin-top: 12px; */
+  margin-top: 12px;
   margin-bottom: 10px;
 `;
 
@@ -68,6 +69,7 @@ export const Button = styled.button`
   letter-spacing: 1px;
   text-transform: uppercase;
   font-size: 1rem;
+  margin-bottom: 12px;
   &:hover {
     color: #9e9fa6;
   }
