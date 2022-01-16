@@ -9,12 +9,14 @@ import {
   LoginLink,
 } from "../Login/styles";
 import useInput from "../hooks/use-input";
+import { useNavigate } from "react-router-dom";
 
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.includes("@");
 const isPassword = (value) => value.length === 6;
 
 const Register = () => {
+  const navigate = useNavigate();
   const {
     value: usernameValue,
     isValid: usernameIsValid,
@@ -46,6 +48,10 @@ const Register = () => {
 
   if (usernameIsValid && emailIsValid && passwordIsValid) {
     formIsValid = true;
+
+    localStorage.setItem("username", usernameValue);
+    localStorage.setItem("email", emailValue);
+    localStorage.setItem("password", passwordValue);
   }
 
   const formSubmitHandler = (event) => {
@@ -59,13 +65,15 @@ const Register = () => {
     resetUsername();
     resetEamil();
     resetPassword();
+
+    navigate(`/`);
   };
 
-  const usernameClasses = usernameHasError
+  let usernameClasses = usernameHasError
     ? "form-control invalid"
     : "form-control";
-  const emailClasses = emailHasError ? "form-control invalid" : "form-control";
-  const passwordClasses = passwordHasError
+  let emailClasses = emailHasError ? "form-control invalid" : "form-control";
+  let passwordClasses = passwordHasError
     ? "form-control invalid"
     : "form-control";
 
