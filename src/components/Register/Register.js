@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.includes("@");
-const isPassword = (value) => value.length === 6;
+const isPassword = (value) => value.length >= 6;
 
 const Register = () => {
   const navigate = useNavigate();
